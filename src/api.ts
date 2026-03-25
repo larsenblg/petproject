@@ -35,6 +35,11 @@ export async function requestDeepSeek(
 
   if (!response.ok) {
     const details = await response.text();
+
+    if (response.status === 402) {
+      throw new Error('Недостаточно средств на балансе DeepSeek. Пополните баланс и повторите запрос.');
+    }
+
     throw new Error(`API error: ${response.status} ${details}`);
   }
 
