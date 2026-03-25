@@ -1,4 +1,3 @@
-# petproject
 # AI-блокнот
 
 Минимальное веб-приложение на React + TypeScript для работы с текстом через DeepSeek API.
